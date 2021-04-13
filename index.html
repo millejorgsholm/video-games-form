@@ -4,97 +4,67 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" href="style.css"/>
     <title>Videogames form</title>
-    <style>
-body{
-  background-color: rgb(218, 218, 218);
-  max-width: 1000px;
-}
-li{
-  list-style-type: none;
-}
-
-  input {
-  width: 20%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  background-color: rgba(240, 240, 240, 0.363);
-  border: 1px solid black;
-  border-radius: 5px;
-} 
-
-input[type=radio],input[type=checkbox]  {
-  width:1%;
-}
-
-button{
-  background-color: black; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 5px;
-  transition: all 0.2s;
-}
-
-button:hover{
-  background-color: #4CAF50; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius:5px;
-
-}
-    </style>
   </head>
   <body>
       <h1>Videogames form</h1>
+      <h2>Enter your data</h2>
     <form>
       <!-- Title field -->
+      <div class="formgroup">
       <legend>Game title</legend>
+      <span>Enter a game title</span><br>
     <label for="title">
-      <input type="text" name="title" placeholder="Title..." />
+      <input type="text" name="title"/>
     </label>
+  </div>
        <!-- Description field -->
+       <div class="formgroup">
        <legend>Description</legend>
+       <span>Enter a game description</span><br>
   <label for="description">
-      <input type="text" name="description" placeholder="Description..." />
+      <input type="text" name="description"/>
     </label>
+    </div>
       <!-- Age limit field -->
+      <div class="formgroup">
       <legend>Age limit</legend>
+      <span>Enter an age limit</span><br>
     <label for="age-limit">
-      <input type="number" name="age-limit" placeholder="Age limit..." />
+      <input type="number" name="age-limit"/>
       </label>
+      </div>
        <!-- Release date field -->
+       <div class="formgroup">
        <legend>Release date</legend>
+       <span>Enter a release date</span><br>
       <label for="release-date">
-      <input type="date" name="release-date" placeholder="Release date..." />
+      <input type="date" name="release-date"/>
       </label>
+      </div>
 
        <!-- Genre field -->
+       <div class="formgroup">
        <legend>Genre</legend>
+       <span>Enter a genre</span><br>
    <label for="genre">
-      <input type="text" name="genre" placeholder="Genre..."/>
+      <input type="text" name="genre"/>
       </label>
+      </div>
 
       <!-- Platforms field -->
+      <fieldset>
       <legend>Platforms</legend>
+      <span>Which platforms are eligible?</span>
       <ul>
       <li>
       <label for="platform_1">
-      <input type="checkbox" name="platform" value="platform 1">>Platform 1</input> 
+      <input type="checkbox" name="platform" value="platform 1">Platform 1</input> 
     </li>
     <li>
       <label for="platform_2">
-      <input type="checkbox" name="platform" value="platform 2">>Platform 2</input>
+      <input type="checkbox" name="platform" value="platform 2">Platform 2</input>
       </label>
     </li>
     <li>
@@ -102,31 +72,42 @@ button:hover{
       <input type="checkbox" name="platform" value="platform 3">Platform 3</input>
       </label>
     </li>
-
       </ul>
+    </fieldset>
 
         <!-- Multiplayer field -->
+        <fieldset>
         <legend>Multiplayer</legend>
+        <span>Is the game multiplayer or singleplayer?</span>
       <label for="multiplayer"></label>
       <input type="radio" name="multiplayer">Multiplayer</input><br><br>  
        <input type="radio" name="multiplayer" >Single player</input>
        </label>
+      </fieldset>
         <!-- Price field -->
-        <legend>Price</legend>
+        <div class="formgroup">
+        <span>Price (in DKK)</span><br>
        <label for="price">
-      <input type="number" name="price" placeholder="Price..." />
+      <input type="number" name="price"/>
       </label>
+      </div>
+      <br>
+      
          <!-- Metascore field -->
-         <legend>Metascore</legend>
+         <div class="formgroup">
+         <span>Metascore (in %)</span>
       <label for="metascore">
-      <input type="range" name="metascore"  min="0" max="100"  placeholder="Metascore..."/>
+      <input type="range" name="metascore"  min="0" max="100"/>
       </label>
+      </div>
 
        <!-- Developer field -->
+       <div class="formgroup">
        <legend>Developer</legend>
       <label for="developer">
-      <input type="text" name="developer" placeholder="Developer..." />
+      <input type="text" name="developer"/>
       </label>
+      </div>
 <br><br>
       <button type="submit">Submit</button>
     </form>
