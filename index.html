@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Videogames form</title>
     <style>
+body{
+  background-color: rgb(218, 218, 218);
+  max-width: 1000px;
+}
+li{
+  list-style-type: none;
+}
+
   input {
   width: 20%;
   padding: 12px 20px;
@@ -14,7 +22,7 @@
   background-color: rgba(240, 240, 240, 0.363);
   border: 1px solid black;
   border-radius: 5px;
-}
+} 
 
 input[type=radio],input[type=checkbox]  {
   width:1%;
@@ -50,28 +58,75 @@ button:hover{
   <body>
       <h1>Videogames form</h1>
     <form>
-      <h3>Title of the game</h3>
+      <!-- Title field -->
+      <legend>Game title</legend>
+    <label for="title">
       <input type="text" name="title" placeholder="Title..." />
-      <h3>Description of the game</h3>
+    </label>
+       <!-- Description field -->
+       <legend>Description</legend>
+  <label for="description">
       <input type="text" name="description" placeholder="Description..." />
-      <h3>Age limit</h3>
+    </label>
+      <!-- Age limit field -->
+      <legend>Age limit</legend>
+    <label for="age-limit">
       <input type="number" name="age-limit" placeholder="Age limit..." />
-      <h3>Release date</h3>
+      </label>
+       <!-- Release date field -->
+       <legend>Release date</legend>
+      <label for="release-date">
       <input type="date" name="release-date" placeholder="Release date..." />
-      <h3>Genre</h3>
+      </label>
+
+       <!-- Genre field -->
+       <legend>Genre</legend>
+   <label for="genre">
       <input type="text" name="genre" placeholder="Genre..."/>
-      <h3>Platforms</h3>
-      <input type="checkbox" name="platforms">Platform 1</input><br><br>  
-      <input type="checkbox" name="platforms" >Platform 2</input>
-      <h3>Multiplayer</h3>
+      </label>
+
+      <!-- Platforms field -->
+      <legend>Platforms</legend>
+      <ul>
+      <li>
+      <label for="platform_1">
+      <input type="checkbox" name="platform" value="platform 1">>Platform 1</input> 
+    </li>
+    <li>
+      <label for="platform_2">
+      <input type="checkbox" name="platform" value="platform 2">>Platform 2</input>
+      </label>
+    </li>
+    <li>
+      <label for="platform_3">
+      <input type="checkbox" name="platform" value="platform 3">Platform 3</input>
+      </label>
+    </li>
+
+      </ul>
+
+        <!-- Multiplayer field -->
+        <legend>Multiplayer</legend>
+      <label for="multiplayer"></label>
       <input type="radio" name="multiplayer">Multiplayer</input><br><br>  
        <input type="radio" name="multiplayer" >Single player</input>
-       <h3>Price</h3>
+       </label>
+        <!-- Price field -->
+        <legend>Price</legend>
+       <label for="price">
       <input type="number" name="price" placeholder="Price..." />
-      <h3>Metascore</h3>
+      </label>
+         <!-- Metascore field -->
+         <legend>Metascore</legend>
+      <label for="metascore">
       <input type="range" name="metascore"  min="0" max="100"  placeholder="Metascore..."/>
-      <h3>Developer</h3>
+      </label>
+
+       <!-- Developer field -->
+       <legend>Developer</legend>
+      <label for="developer">
       <input type="text" name="developer" placeholder="Developer..." />
+      </label>
 <br><br>
       <button type="submit">Submit</button>
     </form>
