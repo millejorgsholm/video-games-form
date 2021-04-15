@@ -18,18 +18,21 @@
     <form>
       <!-- Title field -->
       <div class="formgroup">
+        <div class="form-control">
       <legend>Game title</legend>
       <span>Enter a game title</span><br>
     <label for="title">
-      <input type="text" name="title"/>
+      <input type="text" name="title" required/>
+      <span class="hint">This is a hint</span>
     </label>
+    </div>
   </div>
        <!-- Description field -->
        <div class="formgroup">
        <legend>Description</legend>
        <span>Enter a game description</span><br>
   <label for="description">
-      <input type="text" name="description"/>
+      <input type="text" name="description" required/>
     </label>
     </div>
       <!-- Age limit field -->
@@ -37,7 +40,7 @@
       <legend>Age limit</legend>
       <span>Enter an age limit</span><br>
     <label for="age-limit">
-      <input type="number" name="age-limit"/>
+      <input type="number" name="age-limit" required/>
       </label>
       </div>
        <!-- Release date field -->
@@ -45,7 +48,7 @@
        <legend>Release date</legend>
        <span>Enter a release date</span><br>
       <label for="release-date">
-      <input type="date" name="release-date"/>
+      <input type="date" name="release-date" required/>
       </label>
       </div>
 
@@ -54,7 +57,7 @@
        <legend>Genre</legend>
        <span>Enter a genre</span><br>
    <label for="genre">
-      <input type="text" name="genre"/>
+      <input type="text" name="genre" required/>
       </label>
       </div>
 
@@ -93,7 +96,7 @@
         <div class="formgroup">
         <span class="price-span">Price (in DKK)</span><br>
        <label for="price">
-      <input type="number" name="price"/>
+      <input type="number" name="price" required/>
       </label>
       </div>
       <br>
@@ -110,7 +113,7 @@
        <div class="formgroup">
        <legend>Developer</legend>
       <label for="developer">
-      <input type="text" name="developer"/>
+      <input type="text" name="developer" required/>
       </label>
       </div>
 <br><br>
