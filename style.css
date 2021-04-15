@@ -148,12 +148,6 @@ button:hover {
   right: 15%;
 }
 
-.container-radio {
-  margin-top: 10px;
-  position: relative;
-  right: 45%;
-}
-
 /* Hide the browser's default checkbox */
 .container input {
   position: absolute;
@@ -251,6 +245,101 @@ textarea:invalid:not(:placeholder-shown, :focus) {
   color: red;
   background-image: var(--error);
   animation: shake 0.125s 2 backwards;
+}
+
+/* Radios styling */
+.radios {
+  display: grid;
+  grid: auto-flow 1fr / max-content 1fr;
+  gap: 0.25rem 0.4rem;
+  place-items: center start;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: var(--border-radius, 0);
+  border: 0.075rem solid hsl(200 var(--saturation, 0%) 70%);
+  background: hsl(200 50% 100%);
+  margin: 0;
+  display: inline-grid;
+  outline: none;
+  transition: 0.2s;
+}
+
+input[type="radio"] {
+  --border-radius: 50%;
+}
+
+input[type="checkbox"] {
+  --border-radius: 0.3rem;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  box-shadow: 0 0 0 0.2rem hsl(200 50% 85%);
+}
+/* 
+input[type="checkbox"]:focus + label,
+input[type="radio"]:focus + label {
+  color: hsl(200 50% 30%);
+} */
+
+fieldset:disabled input,
+fieldset:disabled label {
+  opacity: 0.6;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  --saturation: 50%;
+  /* --animation: bounce-in; */
+}
+
+@supports (-webkit-appearance: none) or (appearance: none) {
+  input[type="checkbox"],
+  input[type="radio"] {
+  }
+
+  input[type="radio"]::after {
+    content: "";
+    height: 0.6rem;
+    width: 0.6rem;
+    place-self: center;
+    border-radius: inherit;
+    background: hsl(200 70% 50%);
+    opacity: 0;
+    transition: 0.2s;
+    animation: var(--animation) 0.5s alternate both
+      cubic-bezier(0.5, 0, 0.5, 1.8);
+    border-radius: 50%;
+  }
+
+  input[type="checkbox"]:checked {
+    background: hsl(200 70% 50%);
+  }
+
+  input[type="checkbox"]::after {
+    content: "";
+    width: 0.3rem;
+    height: 0.7rem;
+    border-radius: 0;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    transition: 0.3s;
+    transform: translateY(-0.1rem) rotate(0deg);
+    place-self: center;
+    opacity: 0;
+  }
+
+  input[type="checkbox"]:checked::after {
+    opacity: 1;
+    transform: translateY(-0.1rem) rotate(45deg);
+  }
 }
 
 /* CSS animation */
