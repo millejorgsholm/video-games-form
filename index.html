@@ -22,99 +22,124 @@
       <legend>Game title</legend>
       <span>Enter a game title</span><br>
     <label for="title">
-      <input type="text" name="title" required/>
+      <input type="text" name="title"  required/>
       <span class="hint">This is a hint</span>
     </label>
     </div>
   </div>
        <!-- Description field -->
        <div class="formgroup">
+         <div class="form-control">
        <legend>Description</legend>
        <span>Enter a game description</span><br>
   <label for="description">
-      <input type="text" name="description" required/>
+    <textarea type="text" name="description" minlength="3" maxlength="120"required></textarea></label>
     </label>
+  </div>
     </div>
       <!-- Age limit field -->
       <div class="formgroup">
+        <div class="form-control">
       <legend>Age limit</legend>
       <span>Enter an age limit</span><br>
     <label for="age-limit">
       <input type="number" name="age-limit" required/>
       </label>
       </div>
+      </div>
        <!-- Release date field -->
        <div class="formgroup">
+        <div class="form-control">
        <legend>Release date</legend>
        <span>Enter a release date</span><br>
       <label for="release-date">
       <input type="date" name="release-date" required/>
       </label>
       </div>
+      </div>
 
        <!-- Genre field -->
        <div class="formgroup">
+        <div class="form-control">
        <legend>Genre</legend>
        <span>Enter a genre</span><br>
    <label for="genre">
       <input type="text" name="genre" required/>
       </label>
       </div>
+      </div>
 
       <!-- Platforms field -->
       <fieldset>
+        <div class="form-control">
       <legend>Platforms</legend>
       <span>Which platforms are eligible?</span>
       <ul>
-      <li>
-      <label for="platform_1">
-      <input type="checkbox" name="platform" value="platform 1">Platform 1</input> 
-    </li>
-    <li>
-      <label for="platform_2">
-      <input type="checkbox" name="platform" value="platform 2">Platform 2</input>
+        <div class="container-checkbox">
+        <li><label class="container">Playstation 4
+          <input type="checkbox" name="platform" for="platform1">
+          <span class="checkmark"></span>
+        </label>
+      </li>
+      <li><label class="container">Xbox
+        <input type="checkbox" name="platform" for="platform2">
+        <span class="checkmark"></span>
       </label>
     </li>
     <li>
-      <label for="platform_3">
-      <input type="checkbox" name="platform" value="platform 3">Platform 3</input>
-      </label>
-    </li>
+      <label class="container">Nintendo
+      <input type="checkbox" name="platform" for="platform1">
+      <span class="checkmark"></span>
+    </label>
+  </li>
+</div>
       </ul>
+      </div>
     </fieldset>
 
         <!-- Multiplayer field -->
         <fieldset>
+          <div class="form-control">
         <legend>Multiplayer</legend>
         <span>Is the game multiplayer or singleplayer?</span>
-      <label for="multiplayer"></label>
-      <input type="radio" name="multiplayer">Multiplayer</input><br><br>  
-       <input type="radio" name="multiplayer" >Single player</input>
-       </label>
+        <label class="multiplayer" class="container-radio">
+          <div class="container-radio">
+          <input type="radio" name="multiplayer" for="multiplayer" checked="checked">
+          <input type="radio" name="multiplayer" for="singleplayer" checked="checked">
+          <span class="checkmark-radio"></span>
+        </label>
+        </div>
+       </div>
       </fieldset>
         <!-- Price field -->
         <div class="formgroup">
+          <div class="form-control">
         <span class="price-span">Price (in DKK)</span><br>
        <label for="price">
       <input type="number" name="price" required/>
       </label>
       </div>
+      </div>
       <br>
       
          <!-- Metascore field -->
          <div class="formgroup">
+          <div class="form-control">
          <span class="metascore-span">Metascore (in %)</span>
       <label for="metascore">
       <input type="range" name="metascore"  min="0" max="100"/>
       </label>
       </div>
+      </div>
 
        <!-- Developer field -->
        <div class="formgroup">
+        <div class="form-control">
        <legend>Developer</legend>
       <label for="developer">
       <input type="text" name="developer" required/>
       </label>
+      </div>
       </div>
 <br><br>
       <button type="submit">Submit</button>
