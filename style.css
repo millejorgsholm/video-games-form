@@ -282,12 +282,6 @@ input[type="checkbox"]:focus,
 input[type="radio"]:focus {
   box-shadow: 0 0 0 0.2rem hsl(200 50% 85%);
 }
-/* 
-input[type="checkbox"]:focus + label,
-input[type="radio"]:focus + label {
-  color: hsl(200 50% 30%);
-} */
-
 fieldset:disabled input,
 fieldset:disabled label {
   opacity: 0.6;
